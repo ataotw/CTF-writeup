@@ -27,7 +27,7 @@
 - 功能 1 (encryption oracle)：只能指定長度，伺服器會替你隨機生成那段「證書內容」(純亂數 bytes)，同時會把那段亂數的明文(P)和對應的密文(C)(含 nonce、tag)都印給你看。→ 你得到很多組 (P, nonce, final_tag, C) 的完全對照。
 - 功能 2 (驗證)：你可以丟任意一組 nonce | final_tag | ciphertext 來驗證；但若 final_tag 不正確，會直接說錯（沒回顯更多）。只有在通過 MAC 驗證且解出來的明文包含目標字串時才會給 flag。
 - 互動介面選單如下：  
-![互動介面選單](./interface.jpg)
+![互動介面選單](./interface2.jpg)
 
 #### 4. 解題思路
 > 目標是：偽造一個 nonce | final_tag | ciphertext，通過 MAC 驗證後，解出的明文中含 "give me the flag!!!"。  
